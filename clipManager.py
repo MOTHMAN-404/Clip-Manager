@@ -9,16 +9,25 @@
                 (z + 0) - (z + 9) == copy
                 (x + 0) - (x + 9) == paste
 '''
-import tkinter, pyperclip, keyboard
+import tkinter, pyperclip, keyboard, time
 import pyautogui as py
 
 # When a copy hotkey is pressed
 def copy_triggered():
-        print('copy detected')
+        py.hotkey('ctrl', 'c') # Copy highlighted text
+        time.sleep(.01)        # Wait .01 sec
+        text = pyperclip.paste() # Pass copied text into text
+        print(text) # Test to ensure it's working - delete later
+        #updateGUI(text) 
+        #       --  need to add function to update the gui with added text
+        
 
 # When a paste hotkey is pressed
 def paste_triggered():
         print('paste detected')
+        # Need to make the GUI first to add this functionality 
+        # Should take the text from corresponding row of the GUI
+        # And paste it into the text-field
 
 # Main function
 def main():

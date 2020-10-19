@@ -27,7 +27,7 @@ def main():
                 keyboard.add_hotkey(copyCombo, copy_triggered) # When combo is detected
                 keyboard.add_hotkey(pasteCombo, paste_triggered) # Call the triggered functions
         
-        keyboard.wait() 
+        keyboard.wait('esc') #Ends program when escape is pressed
 
 # Calls main function when the program starts
 if __name__ == "__main__":

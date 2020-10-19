@@ -17,7 +17,7 @@ def copy_triggered():
 def paste_triggered():
         print('paste detected')
 
-if __name__ == "__main__":
+def main():
         for i in range(10):
                 copyCombo = 'z +' + str(i)
                 keyboard.add_hotkey(copyCombo, copy_triggered)
@@ -27,3 +27,6 @@ if __name__ == "__main__":
                 keyboard.add_hotkey(pasteCombo, paste_triggered)
 
         keyboard.wait() 
+
+if __name__ == "__main__":
+        main()

@@ -5,4 +5,4 @@
         into a GUI in order to be copied onto your clipboard
         at any time using a series of hotkeys.
 '''
-import tkinter, pyperclip, pynput
+import tkinter, pyperclip, keyboard

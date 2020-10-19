@@ -17,13 +17,13 @@ def copy_triggered():
 def paste_triggered():
         print('paste detected')
 
-for i in range(10):
-        copyCombo = 'z +' + str(i)
-        keyboard.add_hotkey(copyCombo, copy_triggered)
+if __name__ == "__main__":
+        for i in range(10):
+                copyCombo = 'z +' + str(i)
+                keyboard.add_hotkey(copyCombo, copy_triggered)
 
-for i in range(10):
-        pasteCombo = 'x +' + str(i)
-        keyboard.add_hotkey(pasteCombo, paste_triggered)
+        for i in range(10):
+                pasteCombo = 'x +' + str(i)
+                keyboard.add_hotkey(pasteCombo, paste_triggered)
 
-keyboard.wait() 
-
+        keyboard.wait() 

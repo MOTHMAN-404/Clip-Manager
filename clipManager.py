@@ -10,6 +10,7 @@
                 (x + 0) - (x + 9) == paste
 '''
 import tkinter, pyperclip, keyboard
+import pyautogui as py
 
 # When a copy hotkey is pressed
 def copy_triggered():

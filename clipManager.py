@@ -9,8 +9,16 @@
                 (z + 0) - (z + 9) == copy
                 (x + 0) - (x + 9) == paste
 '''
-import tkinter, pyperclip, keyboard, time
+import pyperclip, keyboard, time
 import pyautogui as py
+from tkinter import TK, BOTH
+from tkinter.ttk import Frame
+
+# Creates empty GUI
+class GUI:
+        def __init__(self, master)
+                self.master = master
+                
 
 # When a copy hotkey is pressed
 def copy_triggered():
@@ -36,7 +44,9 @@ def main():
                 pasteCombo = 'x +' + str(i)    # Paste hotkeys 0-9
                 keyboard.add_hotkey(copyCombo, copy_triggered) # When combo is detected
                 keyboard.add_hotkey(pasteCombo, paste_triggered) # Call the triggered functions
-        
+        root = Tk()
+        gui = GUI(root)
+        #root.mainloop
         keyboard.wait('esc') #Ends program when escape is pressed
 
 # Calls main function when the program starts

@@ -16,9 +16,10 @@ from tkinter.ttk import Frame
 
 # Creates empty GUI
 class GUI:
-        def __init__(self, master)
+        def __init__(self, master):
                 self.master = master
-
+                self.label = Label(self.master, text='Hey bitch boi, yea you')
+                
 
 # When a copy hotkey is pressed
 def copy_triggered():
@@ -46,8 +47,8 @@ def main():
                 keyboard.add_hotkey(pasteCombo, paste_triggered) # Call the triggered functions
         root = Tk()
         gui = GUI(root)
-        #root.mainloop
-        keyboard.wait('esc') #Ends program when escape is pressed
+        root.mainloop()
+        #keyboard.wait('esc') #Ends program when escape is pressed
 
 # Calls main function when the program starts
 if __name__ == "__main__":

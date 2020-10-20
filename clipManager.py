@@ -11,14 +11,14 @@
 '''
 import pyperclip, keyboard, time
 import pyautogui as py
-from tkinter import TK, BOTH
+from tkinter import Tk, Label 
 from tkinter.ttk import Frame
 
 # Creates empty GUI
 class GUI:
         def __init__(self, master)
                 self.master = master
-                
+
 
 # When a copy hotkey is pressed
 def copy_triggered():
